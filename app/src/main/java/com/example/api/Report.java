@@ -17,6 +17,10 @@ class Report {
     @Expose
     private String description;
 
+    @SerializedName("image_url")
+    @Expose
+    private String image_url;
+
     public Report(){};
 
     public Report(int id, String title, String description, String image_url) {
@@ -58,9 +62,6 @@ class Report {
         this.image_url = image_url;
     }
 
-    @SerializedName("image_url")
-    @Expose
-    private String image_url;
 
 
 

@@ -17,7 +17,7 @@ public interface ReportService {
     @POST("denuncias/")
     Call<Report> addReport(@Body Report report);
 
-    @GET("denucnias/{id}")
+    @GET("denuncias/{id}")
     Call<Report> getByIdReport(@Path("id") int id);
 
     @PUT("denuncias/{id}")
