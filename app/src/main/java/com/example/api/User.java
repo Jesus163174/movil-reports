@@ -21,23 +21,16 @@ public class User {
     @Expose
     private String password;
 
-    @SerializedName("type")
-    @Expose
-    private String type;
 
-    @SerializedName("token")
-    @Expose
-    private String token;
 
     public User(){};
 
-    public User(int id, String name, String email, String password, String type, String token) {
+    public User(int id, String name, String email, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.type = type;
-        this.token = token;
+
     }
 
     public int getId() {
@@ -72,19 +65,5 @@ public class User {
         this.password = password;
     }
 
-    public String getType() {
-        return type;
-    }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 }

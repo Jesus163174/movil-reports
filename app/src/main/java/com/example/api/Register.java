@@ -25,8 +25,6 @@ public class Register extends AppCompatActivity {
         final EditText name = findViewById(R.id.name);
         final EditText email = findViewById(R.id.email);
         final EditText password = findViewById(R.id.password);
-        final EditText token = findViewById(R.id.token);
-        final EditText type = findViewById(R.id.type);
         final Button register = findViewById(R.id.btnRegister);
 
         userService = Connection.getServiceRemotee();
@@ -41,8 +39,6 @@ public class Register extends AppCompatActivity {
                 user.setName(name.getText().toString());
                 user.setEmail(email.getText().toString());
                 user.setPassword(password.getText().toString());
-                user.setType(type.getText().toString());
-                user.setToken(token.getText().toString());
                 addUser(user);
                 Intent pantalla2 = new Intent(Register.this, Login.class);
                 startActivity(pantalla2);

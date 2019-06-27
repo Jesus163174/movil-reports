@@ -6,9 +6,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class List extends AppCompatActivity {
-
+    ReportService reportService;
+    ListView list;
+    ArrayList<String> titles = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +22,10 @@ public class List extends AppCompatActivity {
 
         final Button details = findViewById(R.id.btnDetails);
         final FloatingActionButton addItem = findViewById(R.id.fab);
+
+
+
+
 
 
         addItem.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +45,7 @@ public class List extends AppCompatActivity {
             }
         });
     }
+
 
 
 

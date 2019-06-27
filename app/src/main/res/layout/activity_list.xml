@@ -6,6 +6,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".List">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <LinearLayout
         android:layout_width="395dp"
         android:layout_height="715dp"
@@ -30,14 +42,21 @@
 
 
 
-        <Button
-            android:id="@+id/btnDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Report Details" />
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDetails"
+        android:layout_width="283dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="220dp"
+        android:background="@drawable/btn_redondeado_white"
+        android:text="Ver Denuncia"
+        android:textColor="#212121"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

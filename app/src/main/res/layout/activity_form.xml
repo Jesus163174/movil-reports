@@ -6,42 +6,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Form">
 
-    <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="715dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <EditText
-            android:id="@+id/txttitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Insert title" />
-
-        <EditText
-            android:id="@+id/description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Insert description" />
-
-        <EditText
-            android:id="@+id/txtimage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Insert image" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
+    <EditText
+        android:id="@+id/txttitle"
+        android:layout_width="275dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/input"
+        android:hint="Titulo"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ccc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnAddReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add Report" />
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="275dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/input"
+        android:hint="Descripción"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ccc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/txtimage"
+        android:layout_width="275dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/input"
+        android:hint="Imagen"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ccc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
-
+    <Button
+        android:id="@+id/btnAddReport"
+        android:layout_width="283dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="292dp"
+        android:background="@drawable/btn_redondeado_white"
+        android:text="Agregar Denuncia"
+        android:textColor="#212121"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>

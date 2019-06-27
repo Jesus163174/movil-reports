@@ -1,47 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#212121"
     tools:context=".Login">
 
-    <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="715dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
 
-        android:orientation="vertical"
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Insert email" />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="275dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/input"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ccc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Insert password" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="275dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/input"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ccc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="158dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="336dp"
+        android:background="@drawable/btn_redondeado_white"
+        android:text="Iniciar Sesión"
+        android:textColor="#212121"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Register" />
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="158dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="336dp"
+        android:background="@drawable/btn_redondeado_white"
+        android:text="Registrarse"
+        android:textColor="#212121"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-
-    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
