@@ -11,14 +11,15 @@ import retrofit2.http.Path;
 
 public interface ReportService {
 
-    @GET("denuncias/")
+
+    @GET("all")
     Call<List<Report>> getReports();
 
     @POST("denuncias/")
     Call<Report> addReport(@Body Report report);
 
-    @GET("denuncias/{id}")
-    Call<Report> getByIdReport(@Path("id") int id);
+    @GET("show")
+    Call<Report> getByIdReport();
 
     @PUT("denuncias/{id}")
     Call<Report> updateReport(@Path("id") int id, @Body Report report);

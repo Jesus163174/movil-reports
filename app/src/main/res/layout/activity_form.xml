@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Form">
 
     <ImageView
@@ -78,10 +78,43 @@
         android:layout_width="283dp"
         android:layout_height="63dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/btn_redondeado_white"
         android:text="Agregar Denuncia"
         android:textColor="#212121"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddPhoto"
+        android:layout_width="60dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/ic_action_photo"
+        android:text=""
+        android:textColor="#212121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/photoView"
+        android:layout_width="184dp"
+        android:layout_height="166dp"
+        android:layout_below="@+id/btnAddPhoto"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="163dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

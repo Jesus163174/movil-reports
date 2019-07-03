@@ -26,8 +26,8 @@ public class Register extends AppCompatActivity {
         final EditText email = findViewById(R.id.email);
         final EditText password = findViewById(R.id.password);
         final Button register = findViewById(R.id.btnRegister);
-
         userService = Connection.getServiceRemotee();
+
 
 
 

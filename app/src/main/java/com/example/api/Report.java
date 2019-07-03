@@ -3,11 +3,11 @@ package com.example.api;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-class Report {
+class Report{
 
-    @SerializedName("id")
+    @SerializedName("_id")
     @Expose
-    private int id;
+    private String id;
 
     @SerializedName("title")
     @Expose
@@ -21,20 +21,24 @@ class Report {
     @Expose
     private String image_url;
 
+    @SerializedName("user")
+    @Expose
+    private String user;
+
     public Report(){};
 
-    public Report(int id, String title, String description, String image_url) {
+    public Report(String id, String title, String description, String image_url) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.image_url = image_url;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -62,7 +66,11 @@ class Report {
         this.image_url = image_url;
     }
 
+    public String getUser() {
+        return user;
+    }
 
-
-
+    public void setUser(String user) {
+        this.user = user;
+    }
 }

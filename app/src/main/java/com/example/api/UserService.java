@@ -17,6 +17,9 @@ public interface UserService {
     @POST("users/")
     Call<User> addUser(@Body User user);
 
+    @POST("auth/login")
+    Call<List<User>> loginAuth(@Body User user);
+
     @GET("users/{id}")
     Call<User> getByIdUser(@Path("id") int id);
 
