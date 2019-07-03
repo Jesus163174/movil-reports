@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -24,7 +25,7 @@ import retrofit2.Response;
 public class Form extends AppCompatActivity {
 
     ReportService reportService;
-
+    public static final String EXTRA_MESSAGE = "app.activities.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +46,24 @@ public class Form extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                DatabaseHelper dbHandler = new DatabaseHelper(Form.this);
+                ArrayList<String> lista = new ArrayList<>();
+
+                lista = dbHandler.getDataUser(0);
+
+                System.out.println("ID USER: "+lista.get(0));
+
                 Report report = new Report();
                 report.setTitle(title.getText().toString());
                 report.setDescription(description.getText().toString());
                 report.setImage_url(image.getText().toString());
-                report.setUser("5d19bba82924b111132b4c2c");
+                report.setUser(lista.get(0));
                 addReport(report);
-                Intent pantalla2 = new Intent(Form.this, Lista.class);
-                startActivity(pantalla2);
+
+                Intent pantalla = new Intent(Form.this, Lista.class);
+                pantalla.putExtra(EXTRA_MESSAGE,lista.get(0));
+                startActivity(pantalla);
 
             }
         });

@@ -23,7 +23,7 @@ public class Details extends AppCompatActivity {
         final TextView title = findViewById(R.id.txtTitle);
         final TextView description = findViewById(R.id.txtDescription);
         final TextView image = findViewById(R.id.txtImage);
-        final Button back = findViewById(R.id.btnBack);
+        final Button back = findViewById(R.id.btnDelete);
 
         Intent reportID = getIntent();
         String ID = reportID.getStringExtra(Login.EXTRA_MESSAGE);
@@ -42,6 +42,10 @@ public class Details extends AppCompatActivity {
                 title.setText(response.body().getTitle());
                 description.setText(response.body().getDescription());
                 image.setText(response.body().getImage_url());
+
+                title.setEnabled(false);
+                description.setEnabled(false);
+                image.setEnabled(false);
             }
             @Override
             public void onFailure(Call<Report> call, Throwable t) {

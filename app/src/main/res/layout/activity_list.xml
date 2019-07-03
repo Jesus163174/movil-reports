@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/image"
+        android:src="@drawable/images"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -21,25 +21,13 @@
 
     <ListView
         android:id="@+id/ViewList"
-        android:layout_width="395dp"
-        android:layout_height="340dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="224dp"
+        android:layout_width="396dp"
+        android:layout_height="471dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <Button
-        android:id="@+id/btnDetails"
-        android:layout_width="283dp"
-        android:layout_height="63dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="132dp"
-        android:background="@drawable/btn_redondeado_white"
-        android:text="Ver Denuncia"
-        android:textColor="#212121"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

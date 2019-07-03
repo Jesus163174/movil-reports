@@ -2,7 +2,10 @@ package com.example.api;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -69,27 +72,8 @@ public class Lista extends AppCompatActivity implements DenunciaAdapter.AdapterB
             }
         });
 
-        /*final Button details = findViewById(R.id.btnDetails);
         final FloatingActionButton addItem = findViewById(R.id.fab);
-        final Button close = findViewById(R.id.btnCerrar);
-        final TextView txtEmail = findViewById(R.id.txtEmail);
-        final TextView txtName  = findViewById(R.id.txtName);
-        final DatabaseHelper dbHandler = new DatabaseHelper(Lista.this);
-
-
-        btnEliminar = findViewById(R.id.btnEliminar);
-
-
-        ArrayAdapter arrayAdapter = new ArrayAdapter(Lista.this,R.layout.activity_form_denuncias,R.id.listTitle,titles);
-        getReports(dbHandler);
-
-        list = findViewById(R.id.simpleList);
-
-        list.setAdapter(arrayAdapter);*/
-
-
-
-        /*addItem.setOnClickListener(new View.OnClickListener() {
+        addItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent pantalla2 = new Intent(Lista.this, Form.class);
@@ -98,17 +82,12 @@ public class Lista extends AppCompatActivity implements DenunciaAdapter.AdapterB
             }
         });
 
-        details.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent pantalla2 = new Intent(Lista.this, Details.class);
-                startActivity(pantalla2);
-            }
-        });
-
+        final Button close = findViewById(R.id.btnCerrar);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                DatabaseHelper dbHandler = new DatabaseHelper(Lista.this);
+                ArrayList<String> lista = new ArrayList<>();
                 lista = dbHandler.getDataUser(0);
 
                 System.out.println("Cerrando sesión");
@@ -124,7 +103,7 @@ public class Lista extends AppCompatActivity implements DenunciaAdapter.AdapterB
                 Intent pantalla2 = new Intent(Lista.this, Login.class);
                 startActivity(pantalla2);
             }
-        });*/
+        });
     }
 
 
