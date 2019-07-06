@@ -29,7 +29,7 @@ public class Details extends AppCompatActivity {
         String ID = reportID.getStringExtra(Login.EXTRA_MESSAGE);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.5:3000/api/v1/denuncias/"+ID+"/")
+                .baseUrl("http://192.168.43.198:3000/api/v1/denuncias/"+ID+"/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

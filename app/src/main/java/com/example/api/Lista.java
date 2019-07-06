@@ -52,7 +52,7 @@ public class Lista extends AppCompatActivity implements DenunciaAdapter.AdapterB
         listView.setAdapter(denunciaAdapter);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.5:3000/api/v1/denuncias/"+USERID+"/")
+                .baseUrl("http://192.168.43.198:3000/api/v1/denuncias/"+USERID+"/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
